@@ -1,0 +1,25 @@
+baseURL = 'http://pct.hanazo.no/'
+languageCode = 'en-us'
+title = 'Pacific Crest TrailT 2022'
+
+theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
+
+[params]
+  background_color_class = "bg-gray"
+
+[menu]
+    [[menu.main]]
+        identifier = "Map"
+        name = "Map"
+        url = "/map/"
+        weight = 0
+    [[menu.main]]
+        identifier = "About"
+        name = "About"
+        url = "/about/"
+        weight = -100
+    [[menu.main]]
+        identifier = "randomtrips"
+        name = "Random Trips"
+        weight = -110
+
