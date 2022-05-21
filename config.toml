@@ -7,6 +7,14 @@ theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
 [params]
   background_color_class = "bg-gray"
 
+[module]
+    [[module.mounts]]
+        source = "../images"
+        target = "static/images"
+    [[module.mounts]]
+        source = "ol-map/dist"
+        target = "static/map"
+
 [menu]
     [[menu.main]]
         identifier = "Map"
