@@ -6,4 +6,4 @@ date: 2022-05-21
 
 # Enda en test
 
-{{< gallery dir=param date />}}
+{{< gallery dir=/images/2022-05-21	/>}}
