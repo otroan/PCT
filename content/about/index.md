@@ -2,6 +2,9 @@
 title: "About me"
 date: 2022-05-03T14:27:55+02:00
 draft: false
+menu:
+  main:
+    weight: 1
 ---
 
 ## Ole Tr&oslash;an

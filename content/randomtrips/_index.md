@@ -1,6 +1,7 @@
 ---
-title: Random Trips
+title: Nubbielva bruinspeksjon
 menu:
-  randomtrips:
-    weight: 20
+  main:
+    weight: 3
+    name: Other trips
 ---

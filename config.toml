@@ -1,6 +1,6 @@
 baseURL = 'http://pct.hanazo.no/'
 languageCode = 'en-us'
-title = 'Pacific Crest Trail 2022'
+title = 'Pacific Crest Trail'
 
 theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
 
@@ -24,13 +24,6 @@ theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
         name = "Map"
         url = "/map/"
         weight = 0
-    [[menu.main]]
-        identifier = "About"
-        name = "About"
-        url = "/about/"
-        weight = -100
-    [[menu.main]]
-        identifier = "randomtrips"
-        name = "Random Trips"
-        weight = -110
 
+[markup.goldmark.renderer]
+  unsafe = true
