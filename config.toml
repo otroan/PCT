@@ -1,6 +1,6 @@
 baseURL = 'http://pct.hanazo.no/'
 languageCode = 'en-us'
-title = 'Pacific Crest TrailT 2022'
+title = 'Pacific Crest Trail 2022'
 
 theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
 
@@ -9,11 +9,14 @@ theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
 
 [module]
     [[module.mounts]]
-        source = "../images"
-        target = "static/images"
+        source = "ol-map/dist/index.html"
+        target = "static/map/index.html"
     [[module.mounts]]
-        source = "ol-map/dist"
-        target = "static/map"
+        source = "ol-map/dist/assets"
+        target = "static/assets"
+    [[module.mounts]]
+        source = "static"
+        target = "static"
 
 [menu]
     [[menu.main]]
