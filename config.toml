@@ -2,7 +2,8 @@ baseURL = 'http://pct.hanazo.no/'
 languageCode = 'en-us'
 title = 'Pacific Crest Trail'
 
-theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
+#theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
+theme = ["github.com/halogenica/beautifulhugo"]
 
 [params]
   background_color_class = "bg-gray"
