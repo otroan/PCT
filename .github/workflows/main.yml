@@ -43,7 +43,7 @@ jobs:
       - name: Deploy
         uses: jakejarvis/s3-sync-action@master
         with:
-          args: --acl public-read --follow-symlinks --delete --exclude='map/data/OleTroan.kml' --exclude='images/2022*'
+          args: --acl public-read --size-only --follow-symlinks --delete --exclude='map/data/OleTroan.kml' --exclude='images/2022*'
         env:
           AWS_S3_BUCKET: 'pct.hanazo.no'
           AWS_ACCESS_KEY_ID: ${{ secrets.LINODE_ACCESS_KEY_ID }}
