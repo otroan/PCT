@@ -21,42 +21,41 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     
-      - uses: actions/checkout@v3
-        with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+      #- uses: actions/checkout@v3
+      #  with:
+      #    submodules: true  # Fetch Hugo themes (true OR recursive)
+      #    fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-          # extended: true
+      #- name: Setup Hugo
+      #  uses: peaceiris/actions-hugo@v2
+      #  with:
+      #    hugo-version: 'latest'
+      #    # extended: true
 
       # TODO:
       # - Fetch photos filenames
 
-      - name: Build
-        run: hugo --minify
+      #- name: Build
+      #  run: hugo --minify
 
       # s3cmd sync --exclude=OleTroan.kml --rexclude="^.*images\/2022*" --no-mime-magic --acl-public --delete-removed --delete-after public/ s3://pct.hanazo.no
       # aws s3 sync --dryrun --endpoint="http://eu-central-1.linodeobjects.com/" --acl public-read --follow-symlinks --delete --exclude='images/*' --exclude='map/data/OleTroan.kml' public/ s3://pct.hanazo.no
-      - name: Deploy
-        uses: jakejarvis/s3-sync-action@master
-        with:
-          args: --acl public-read --size-only --follow-symlinks --delete --exclude='map/data/OleTroan.kml' --exclude='images/2022*'
-        env:
-          AWS_S3_BUCKET: 'pct.hanazo.no'
-          AWS_ACCESS_KEY_ID: ${{ secrets.LINODE_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.LINODE_SECRET_ACCESS_KEY }}
-          #AWS_REGION: 'us-west-1'   # optional: defaults to us-east-1
-          AWS_S3_ENDPOINT: 'http://eu-central-1.linodeobjects.com/'
-          SOURCE_DIR: 'public'      # optional: defaults to entire repository        
-
-      #- uses: garygrossgarten/github-action-ssh@release
-      #  name: deploy hugo via ssh
+      #- name: Deploy
+      #  uses: jakejarvis/s3-sync-action@master
       #  with:
-      #    command: /home/otroan/bin/deploy.sh
-      #    host: ${{ secrets.REMOTE_HOST }}
-      #    username: ${{ secrets.REMOTE_USER }}
-      #    privateKey: ${{ secrets.HANAZONO }}
+      #    args: --acl public-read --size-only --follow-symlinks --delete --exclude='map/data/OleTroan.kml' --exclude='images/2022*'
+      #  env:
+      #    AWS_S3_BUCKET: 'pct.hanazo.no'
+      #    AWS_ACCESS_KEY_ID: ${{ secrets.LINODE_ACCESS_KEY_ID }}
+      #    AWS_SECRET_ACCESS_KEY: ${{ secrets.LINODE_SECRET_ACCESS_KEY }}
+      #    #AWS_REGION: 'us-west-1'   # optional: defaults to us-east-1
+      #    AWS_S3_ENDPOINT: 'http://eu-central-1.linodeobjects.com/'
+      #    SOURCE_DIR: 'public'      # optional: defaults to entire repository        
 
+      - uses: garygrossgarten/github-action-ssh@release
+        name: deploy hugo via ssh
+        with:
+          command: /home/otroan/bin/deploy.sh
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          privateKey: ${{ secrets.HANAZONO }}
