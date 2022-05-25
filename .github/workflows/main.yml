@@ -48,7 +48,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.LINODE_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.LINODE_SECRET_ACCESS_KEY }}
           #AWS_REGION: 'us-west-1'   # optional: defaults to us-east-1
-          AWS_S3_ENDPOINT: 'pct.hanazo.no.eu-central-1.linodeobjects.com'
+          AWS_S3_ENDPOINT: 'http://pct.hanazo.no.eu-central-1.linodeobjects.com/'
           SOURCE_DIR: 'public'      # optional: defaults to entire repository        
 
       #- uses: garygrossgarten/github-action-ssh@release
