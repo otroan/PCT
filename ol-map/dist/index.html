@@ -5,12 +5,21 @@
     <link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Using OpenLayers with Vite</title>
-    <script type="module" crossorigin src="/assets/index.a8e72f33.js"></script>
+    <script src="https://unpkg.com/elm-pep@1.0.6/dist/elm-pep.js"></script>
+    <style>
+        .map {
+          width: 100%;
+          height: 70vh;
+        }
+        info.mix {border-style: dotted dashed solid double;}
+      </style>
+    <script type="module" crossorigin src="/assets/index.21f1fe0f.js"></script>
     <link rel="modulepreload" href="/assets/vendor.44271ac0.js">
-    <link rel="stylesheet" href="/assets/index.2beb60fa.css">
+    <link rel="stylesheet" href="/assets/index.ab9aa132.css">
   </head>
   <body>
-    <div id="map"></div>
+    <div id="map" class="map"></div>
+    <div id="info">&nbsp;</div>
     
   </body>
 </html>

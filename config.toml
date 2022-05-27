@@ -20,9 +20,9 @@ enableGitInfo = true
   position = "center"
 
 [module]
-    [[module.mounts]]
-        source = "ol-map/dist/index.html"
-        target = "static/map/index.html"
+#    [[module.mounts]]
+#        source = "ol-map/dist/index.html"
+#        target = "static/map/index.html"
     [[module.mounts]]
         source = "ol-map/dist/assets"
         target = "static/assets"
