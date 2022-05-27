@@ -21,7 +21,8 @@ const pct_vector = new VectorLayer({
 
 const ole_vector = new VectorLayer({
     source: new VectorSource({
-        url: 'data/OleTroan.kml',
+        // url: 'data/OleTroan.kml',
+        url: 'data/OleTroan.kml' + '?time='+ new Date().getTime(),
         format: new KML(),
         crossOrigin: 'anonymous'
     }),
