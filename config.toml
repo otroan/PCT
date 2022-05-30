@@ -5,13 +5,24 @@ title = 'Pacific Crest Trail'
 #theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
 theme = ["github.com/halogenica/beautifulhugo"]
 
+enableGitInfo = true
+
 [params]
   background_color_class = "bg-gray"
+  commit = "https://github.com/otroan/PCT/tree/"
+  readingTime = true
+  selfHosted = true
+  copyright = "CC BY-SA 4.0"
+
+[[Params.bigimg]]
+  src = "IMG_0897.JPG"
+  desc = "Lille Persille og Mathilde"
+  position = "center"
 
 [module]
-    [[module.mounts]]
-        source = "ol-map/dist/index.html"
-        target = "static/map/index.html"
+#    [[module.mounts]]
+#        source = "ol-map/dist/index.html"
+#        target = "static/map/index.html"
     [[module.mounts]]
         source = "ol-map/dist/assets"
         target = "static/assets"
@@ -28,3 +39,9 @@ theme = ["github.com/halogenica/beautifulhugo"]
 
 [markup.goldmark.renderer]
   unsafe = true
+
+[Author]
+  name = "Ole Trøan"
+  email = "ichiroumakino@gmail.com"
+
+
