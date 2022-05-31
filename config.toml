@@ -44,4 +44,5 @@ enableGitInfo = true
   name = "Ole Trøan"
   email = "ichiroumakino@gmail.com"
 
-
+[Params.staticman]
+  api = "https://pct-vm.hanazo.no:8443/v3/entry/github/otroan/PCT/main/comments"
