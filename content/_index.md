@@ -1,5 +1,5 @@
 ---
-title: "Stepping from Mexico to Canada or somewhere in between"
+title: "Ole doing America. Stepping from Mexico to Canada or somewhere in between"
 ---
 
 This trip was a 50th year birthday present to myself.
